@@ -33,6 +33,20 @@
         document.body.style.background = `#${colorHex}`;
       } else if (colorName) {
         document.body.style.background = colorName;
+      } else {
+        const p = document.createElement("p");
+        p.innerText = "You didn't set a color.";
+
+        const a = document.createElement("a");
+        a.setAttribute(
+          "href",
+          "https://github.com/dmreagan/background-color/blob/master/readme.md"
+        );
+        a.setAttribute("target", "noreferrer noopener");
+        a.innerText = "See instructions here.";
+
+        document.body.appendChild(p);
+        document.body.appendChild(a);
       }
     </script>
   </body>
